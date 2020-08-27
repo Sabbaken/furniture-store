@@ -38,17 +38,3 @@ export const addComment = (comment) => {
       })
   }
 }
-
-export const addCommentLike = (tescherID) => {
-  return (dispatch, getState, {getFirebase, getFirestore}) => {
-    // const firestore = getFirestore();
-    // let teachersDocument = firestore.collection('teacher').doc(tescherID)
-    //
-    // teachersDocument.get()
-    //   .then((doc) => {
-    //     dispatch({type: 'ADD_COMMENT_LIKE_SUCCESS', payload: {allTeacher: doc.data()}})
-    //   }).catch(function(error) {
-    //   dispatch({type: 'ADD_COMMENT_LIKE_ERROR', payload: {error: error}})
-    // });
-  }
-}

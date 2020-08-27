@@ -1,7 +1,49 @@
 $font-family: roboto, sans-serif;
 
-@mixin font-primary {
-  color: $c-text-primary;
+@mixin font-button-primary {
+}
+
+@mixin font-section-title {
+}
+
+// big card
+@mixin font-big-card-price {
+}
+
+@mixin font-big-card-title {
+}
+
+@mixin font-text {
+}
+
+@mixin font-button-secondary {
+}
+
+// small card
+@mixin font-small-card-price {
+}
+
+@mixin font-small-card-title {
+}
+
+// transparent card
+@mixin font-price {
+}
+
+@mixin font-title {
+}
+
+// links
+@mixin font-link {
   font-family: $font-family;
-  font-size: 16px;
+  font-size: 15px;
+  color: $c-link;
+  text-decoration: none;
+}
+
+@mixin font-link-active {
+  font-family: $font-family;
+  font-size: 15px;
+  color: $c-link-active;
+  text-decoration: none;
 }

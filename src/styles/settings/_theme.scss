@@ -2,18 +2,23 @@
 
 // Text
 $c-text-primary: $c-black;
-$c-text-secondary: $c-gray;
+$c-text-secondary: $c-grayer;
+$c-text-tertiary: $c-white;
+
+$c-link: $c-gray-light;
+$c-link-active: $c-white;
+$c-link-hover: $c-white;
 
 // Buttons
-$c-button-primary: $c-gray;
+$c-button-primary: $c-grayer;
 $c-button-secondary: $c-gray-blue;
 
 // Lines
 $c-separating-line: $c-gray-lightest;
 
 // Background
-$c-background: $c-white;
-$c-background-navbar: $c-gray-lighter;
+$c-background: $c-gray;
+$c-background-navbar: $c-grayer;
 $c-background-card: $c-white;
 
 // Like

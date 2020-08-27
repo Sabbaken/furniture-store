@@ -1,0 +1,44 @@
+@import "../settings/all";
+
+.navbar {
+  width: 70px;
+  height: 100%;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $c-background-navbar;
+
+  @include remove-user-select();
+}
+
+.navbar__links {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__link {
+  margin: 16px auto;
+  padding: 0 20px;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+
+  @include font-link();
+}
+
+.navbar__link--active {
+  @include font-link-active();
+}
+
+.navbar__buttons {
+  margin: 25px auto;
+}
+
+.navbar__button {
+  padding: 10px;
+}

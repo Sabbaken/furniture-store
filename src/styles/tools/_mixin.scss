@@ -1,0 +1,11 @@
+@mixin remove-user-select {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+@mixin hide-on-mobile {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+  }
+}

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import Navbar from "../components/navbar";
 
 const Main = () => {
   return (
-    <div>
+    <Fragment>
       Main page
-    </div>
+
+      <Navbar/>
+    </Fragment>
   );
 };
 
