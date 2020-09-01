@@ -15,13 +15,13 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={() => <Redirect to="/section/livingroom"/>}/>
-            <Route exact path='/section/:section' component={Main}/>
-            <Route exact path='/product/:id' component={Product}/>
-            <Route exact path='/checkout' component={Checkout}/>
-            <Route component={PageNotFound}/>
-          </Switch>
+        <Switch>
+          <Route exact path='/' component={() => <Redirect to="/section/livingroom"/>}/>
+          <Route exact path='/section/:section' component={Main}/>
+          <Route exact path='/product/:id' component={Product}/>
+          <Route exact path='/checkout' component={Checkout}/>
+          <Route component={PageNotFound}/>
+        </Switch>
       </BrowserRouter>
     </Provider>
   )

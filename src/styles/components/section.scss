@@ -1,0 +1,12 @@
+@import "../settings/all";
+
+.section {
+  margin: 15px;
+  padding: 10px;
+  width: 90%;
+}
+
+.section__title {
+  margin-bottom: 20px;
+  @include font-section-title();
+}
