@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Navbar from "../components/navbar";
+import Navbar from "../components/navbar/navbar";
 
 const Main = () => {
   return (

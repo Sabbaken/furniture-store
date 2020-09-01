@@ -1,14 +1,14 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import Search from "./search/search";
+import Cart from "./cart";
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar__buttons">
-        <div className="navbar__button">
+          <Cart/>
           <Search/>
-        </div>
       </div>
 
       <div className="navbar__links">

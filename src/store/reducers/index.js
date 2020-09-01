@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import teacherReducer from "./teacherReducer";
+import cartReducer from "./cartReducer";
 
 export default combineReducers({
-  teacher: teacherReducer,
+  cart: cartReducer,
 });

@@ -1,19 +1,20 @@
-// import { browserHistory } from 'react-router'
-
 const initialState = {
-  error: null,
-  loaded: false,
-  uploading: false,
-  teacher: {},
+  cart: [1]
 }
 
 export default (state = initialState, action) => {
 
   switch (action.type) {
-    case 'LOAD_TEACHER_DATA_SUCCESS':
+    case 'ADD_ITEM':
       return Object.assign({}, state, {...action.payload.teacher}, {error: null, loaded: true});
 
-    case 'LOAD_TEACHER_DATA_ERROR':
+    case 'REMOVE_ITEM':
+      return Object.assign({}, state, {error: true, loaded: false});
+
+    case 'INCREASE_ITEM':
+      return Object.assign({}, state, {error: true, loaded: false});
+
+    case 'DECREASE_ITEM':
       return Object.assign({}, state, {error: true, loaded: false});
 
     default:
