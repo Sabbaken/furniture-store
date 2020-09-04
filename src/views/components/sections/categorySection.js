@@ -7,7 +7,7 @@ import {fetchSection} from "../../../store/actions/productsActions";
 const CategorySection = ({section, products, fetchSection}) => {
   if(!products[section]) {
     fetchSection(section);
-    return <p>Loading...</p>;
+    return <LoadingIcon/>;
   }
 
   section = products[section];
