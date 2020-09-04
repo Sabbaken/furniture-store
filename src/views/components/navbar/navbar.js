@@ -17,7 +17,7 @@ const Navbar = () => {
           activeClassName="navbar__link navbar__link--active"
           to="/section/bathroom"
         >
-          Bathroom
+          Kitchen
         </NavLink>
 
         <NavLink
