@@ -3,8 +3,6 @@ import {connect} from "react-redux";
 import {NavLink} from "react-router-dom";
 
 const Cart = ({showDot = true}) => {
-  console.log("showDot: ", showDot)
-
   return (
     <NavLink to="/checkout" className="cart">
       <img className="navbar__button" src="/icons/shopping-bag.svg" alt="shopping cart"/>

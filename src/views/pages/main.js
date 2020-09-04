@@ -1,17 +1,17 @@
-import React, {Fragment} from 'react';
+import React, {Component, Fragment} from 'react';
 import Navbar from "../components/navbar/navbar";
-import Section from "../components/sections/section";
+import CategorySection from "../components/sections/categorySection";
 
-const Main = () => {
-  return (
-    <Fragment>
-      <Section title={"Trending"}>
-        some content
-      </Section>
-      <Navbar/>
 
-    </Fragment>
-  );
-};
+class Main extends Component {
+  render() {
+    return (
+      <Fragment>
+        <CategorySection section={this.props.match.params.section}/>
+        <Navbar/>
+      </Fragment>
+    );
+  }
+}
 
 export default Main;
