@@ -1,13 +1,15 @@
 const functions = require('firebase-functions');
+const cors = require('cors')({origin: true});
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
 let db = admin.firestore();
 
-exports.fetchSection = functions.https.onRequest((request, response) => {
+exports.fetchSection = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
 
   let items = [];
-  switch (request.query.section) {
+  switch (req.query.section) {
     case 'livingroom':
       items = ['tBOAxDwalPgr1CWtGBT8','stNAdaQ3aNdYZqM2WtV2','kXjyw6VKEWkRYWkyvrmy',]
       break;
@@ -41,11 +43,12 @@ exports.fetchSection = functions.https.onRequest((request, response) => {
         }
       });
 
-      response.send({section: selectedItems});
+      res.send({section: selectedItems});
     })
     .catch(err => {
       console.log('Error getting documents', err);
     });
+  })
 });
 
 
