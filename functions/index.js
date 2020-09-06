@@ -7,8 +7,8 @@ let db = admin.firestore();
 
 exports.fetchSection = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
-
   let items = [];
+
   switch (req.query.section) {
     case 'livingroom':
       items = ['tBOAxDwalPgr1CWtGBT8','stNAdaQ3aNdYZqM2WtV2','kXjyw6VKEWkRYWkyvrmy',]
@@ -51,5 +51,25 @@ exports.fetchSection = functions.https.onRequest((req, res) => {
   })
 });
 
+exports.fetchProduct = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    let furnitureRef = db.collection('furniture');
 
+    furnitureRef.doc(req.query.product).get()
+      .then((doc) => {
+        if (doc.data() === undefined)
+          raiseError('invalid-argument', 'No such product')
+          res.send({product: doc.data()});
+      })
+      .catch(error => {
+        raiseError('invalid-argument', 'No such product');
+      })
+  });
+});
 
+function raiseError(code, message) {
+  throw new functions.https.HttpsError(
+    code,
+    message
+  );
+}

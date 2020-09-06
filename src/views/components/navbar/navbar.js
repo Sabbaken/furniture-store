@@ -1,41 +1,32 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
 import Search from "./search/search";
 import Cart from "./cart";
+import Links from "./links";
+import Checkout from "./checkout";
 
-const Navbar = () => {
+const Navbar = ({type}) => {
+  if (type === 'product') {
+    return (
+      <div className="navbar">
+        <div className="navbar__buttons">
+          <Cart/>
+        </div>
+
+        <div className="navbar__buttons">
+          <Checkout/>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="navbar">
       <div className="navbar__buttons">
-          <Cart/>
-          <Search/>
+        <Cart/>
+        <Search/>
       </div>
 
-      <div className="navbar__links">
-        <NavLink
-          className="navbar__link"
-          activeClassName="navbar__link navbar__link--active"
-          to="/section/bathroom"
-        >
-          Kitchen
-        </NavLink>
-
-        <NavLink
-          className="navbar__link"
-          activeClassName="navbar__link navbar__link--active"
-          to="/section/bedroom"
-        >
-          Bedroom
-        </NavLink>
-
-        <NavLink
-          className="navbar__link"
-          activeClassName="navbar__link navbar__link--active"
-          to="/section/livingroom"
-        >
-          Living room
-        </NavLink>
-      </div>
+      <Links/>
     </div>
   );
 };
