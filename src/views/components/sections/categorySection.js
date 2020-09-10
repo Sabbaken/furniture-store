@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Section from "./section";
-import SmallCard from "../navbar/cards/smallCard";
+import SmallCard from "../cards/smallCard";
 import {fetchSection} from "../../../store/actions/productsActions";
 import LoadingIcon from "../loadingIcon";
 
