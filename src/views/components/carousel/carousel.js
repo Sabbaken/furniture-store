@@ -24,7 +24,7 @@ class Carousel extends Component {
     return (
       <div className="carousel">
         <div className="carousel__image-area">
-          <img className="carousel__image" src={models[selectedModel].photo} alt="furniture photo"/>
+          <img className="carousel__image" src={models[selectedModel].photo} alt="furniture"/>
         </div>
           <ModelPicker selectedModel={selectedModel} models={models} handlePick={this.handlePick}/>
       </div>
