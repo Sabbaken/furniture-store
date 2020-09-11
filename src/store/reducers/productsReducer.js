@@ -1,5 +1,6 @@
 const initialState = {
-  products: {}
+  products: {},
+  product: {}
 }
 
 export default (state = initialState, action) => {
@@ -14,7 +15,13 @@ export default (state = initialState, action) => {
       });
 
     case 'FETCH_CATEGORY_ERROR':
-      return Object.assign({}, state, {...action.payload.teacher});
+      return state;
+
+    case 'FETCH_PRODUCT_SUCCESS':
+      return Object.assign({}, state, {product: action.payload});
+
+    case 'FETCH_PRODUCT_ERROR':
+      return state;
 
     default:
       return state;
