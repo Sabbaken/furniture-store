@@ -11,10 +11,6 @@ const Navbar = ({type}) => {
         <div className="navbar__buttons">
           <Cart/>
         </div>
-
-        <div className="navbar__buttons">
-          <Checkout/>
-        </div>
       </div>
     );
   }

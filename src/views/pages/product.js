@@ -5,13 +5,14 @@ import {withRouter} from "react-router";
 import {connect} from "react-redux";
 import {fetchProduct} from "../../store/actions/productsActions";
 import LoadingIcon from "../components/loadingIcon";
+import Checkout from "../components/navbar/checkout";
 
 class Product extends Component {
 
   render() {
     const {product, fetchProduct} = this.props;
 
-    if(this.props.match.params.id !== product.id){
+    if (this.props.match.params.id !== product.id) {
       fetchProduct(this.props.match.params.id)
       return (
         <div>
@@ -25,6 +26,7 @@ class Product extends Component {
       <div>
         <BigCard product={product}/>
         <Navbar type={'product'}/>
+        <Checkout/>
       </div>
     );
   }

@@ -5,8 +5,10 @@ import {Link} from "react-router-dom";
 class Checkout extends Component {
   render() {
     return (
-      <Link to='/checkout'>
-        <img className="navbar__button-big" src="/icons/chevron-right.svg" alt="checkout"/>
+      <Link className="checkout" to='/checkout'>
+        <span className="checkout__link btn btn-secondary ">BUY NOW
+        </span>
+        <img className="checkout__icon" src="/icons/chevron-right.svg" alt="checkout"/>
       </Link>
     );
   }

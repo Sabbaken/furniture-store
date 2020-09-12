@@ -1,11 +1,42 @@
-.btn {
+@import "../settings/all";
 
+.btn {
+  padding: 16px 24px;
+  min-width: 100px;
+  margin: 1px;
+  border: none;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn-primary {
+  border: none;
+  border-radius: 14px;
+  background-color: $c-button-primary-background;
 
+  img {
+    height: 18px;
+    margin-left: 16px;
+  }
+
+  @include font-button-primary();
+
+  &:hover {
+    background-color: darken($c-button-primary-background, 3%);
+  }
+
+  &:active {
+    background-color: darken($c-button-primary-background, 8%);
+  }
 }
 
 .btn-secondary {
+  border: none;
+  border-radius: 14px;
+  background-color: $c-button-secondary-background;
 
+  @include font-button-secondary();
 }
