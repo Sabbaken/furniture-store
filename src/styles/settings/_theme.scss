@@ -5,16 +5,21 @@ $c-text-primary: $c-black;
 $c-text-secondary: $c-grayer;
 $c-text-tertiary: $c-white;
 
+$c-text-description: $c-gray-light;
+
 $c-link: $c-gray-light;
 $c-link-active: $c-white;
 $c-link-hover: $c-white;
 
 // Buttons
 $c-button-primary: $c-grayer;
+$c-button-primary-background: $c-gray-lighter;
 $c-button-secondary: $c-gray-blue;
+$c-button-secondary-background: none;
+
 
 // Lines
-$c-separating-line: $c-gray-lightest;
+$c-separating-line: $c-gray-lighter;
 
 // Background
 $c-background: $c-gray;

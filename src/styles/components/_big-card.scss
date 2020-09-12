@@ -1,8 +1,36 @@
 @import "../settings/all";
 
 .big-card {
-  margin: 25% 0;
-
-  background-color: $c-background-card;
+  margin: 70px 0 0;
+  padding-bottom: 30px;
+  position: relative;
   border-radius: 16px;
+  background-color: $c-background-card;
+  z-index: $layer-card;
 }
+
+.big-card__content {
+  padding: 0 25px;
+}
+
+.big-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.big-card__title {
+  @include font-big-card-title();
+}
+
+.big-card__description {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1.6px solid $c-separating-line;
+  @include font-big-card-text();
+}
+
+.big-card__price-tag {
+  @include font-big-card-price();
+}
+
