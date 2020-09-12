@@ -2,7 +2,7 @@ import React from 'react';
 import Search from "./search/search";
 import Cart from "./cart";
 import Links from "./links";
-import Checkout from "./checkout";
+import Checkout from "../checkout";
 
 const Navbar = ({type}) => {
   if (type === 'product') {

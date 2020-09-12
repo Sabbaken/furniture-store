@@ -5,7 +5,8 @@ import {withRouter} from "react-router";
 import {connect} from "react-redux";
 import {fetchProduct} from "../../store/actions/productsActions";
 import LoadingIcon from "../components/loadingIcon";
-import Checkout from "../components/navbar/checkout";
+import Checkout from "../components/checkout";
+import GoBack from "../components/goBack";
 
 class Product extends Component {
 
@@ -24,6 +25,7 @@ class Product extends Component {
 
     return (
       <div>
+        <GoBack/>
         <BigCard product={product}/>
         <Navbar type={'product'}/>
         <Checkout/>
