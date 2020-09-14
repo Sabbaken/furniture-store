@@ -17,7 +17,7 @@ const Cart = ({showDot = true}) => {
 
 const mapStateToProps = (state) => {
   return {
-    showDot: state.cart.cart.length > 0,
+    showDot: state.cart.cartContent.length > 0,
   }
 }
 

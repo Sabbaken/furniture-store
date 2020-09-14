@@ -1,8 +1,10 @@
 import React from 'react';
 import Carousel from "../carousel/carousel";
 import Stars from "../stars";
+import {addItem} from "../../../store/actions/cartActions";
+import {connect} from "react-redux";
 
-const BigCard = ({product}) => {
+const BigCard = ({product, addItem}) => {
   return (
     <div className="big-card">
       <div>
@@ -23,10 +25,16 @@ const BigCard = ({product}) => {
         <span className="big-card__price-tag">
           ${product.price}
         </span>
-        <button className="btn btn-primary">cart <img src="/icons/plus.svg" alt="add to cart"/></button>
+        <button className="btn btn-primary" onClick={() => {addItem(product)}}>cart <img src="/icons/plus.svg" alt="add to cart"/></button>
       </div>
     </div>
   );
 };
 
-export default BigCard;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addItem: (item) => dispatch(addItem(item))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(BigCard);
