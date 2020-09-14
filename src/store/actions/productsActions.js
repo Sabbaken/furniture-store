@@ -13,8 +13,6 @@ export const fetchSection = (section) => {
 }
 
 export const fetchProduct = (productID) => {
-  console.log("fetchProduct")
-
   return (dispatch, getState) => {
     axios.get(`https://us-central1-furniture-store-530bc.cloudfunctions.net/fetchProduct?product=${productID}`)
       .then((response) => {
