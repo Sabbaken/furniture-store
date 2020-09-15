@@ -9,7 +9,13 @@ body {
 }
 
 .content {
-  margin: 70px 0;
+  margin: 70px auto 0;
+  max-width: 500px;
+}
+
+.content-wide {
+  margin: 70px auto 0;
+  max-width: 800px;
 }
 
 body {

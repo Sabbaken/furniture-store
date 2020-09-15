@@ -31,6 +31,14 @@ $font-family: roboto, sans-serif;
   text-transform: uppercase;
 }
 
+@mixin font-button-action {
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 600;
+  color: $c-button-secondary;
+  text-transform: uppercase;
+}
+
 @mixin font-label {
   font-family: $font-family;
   font-size: 16px;

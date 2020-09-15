@@ -17,8 +17,8 @@ const CartContent = ({cartContent, handleDecrease, handleIncrease}) => {
   if (cartContent.length < 1)
     return (
       <Card title={'Cart'}>
-          <span>
-            You don't have any items in cart
+          <span className="label">
+            Your cart is empty
           </span>
       </Card>
     );

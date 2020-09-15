@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 
 const BigCard = ({product, addItem}) => {
   return (
-    <div className="big-card">
+    <div className="big-card content-wide">
       <div>
         <Carousel models={product.models}/>
       </div>

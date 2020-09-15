@@ -8,6 +8,11 @@ const CheckoutList = () => {
     <div className="content">
       <CartContent/>
       <ShippingDetails/>
+      <PaymentMethod/>
+
+      <div className="card__content">
+        <button className="btn btn-action">Confirm</button>
+      </div>
     </div>
   );
 };

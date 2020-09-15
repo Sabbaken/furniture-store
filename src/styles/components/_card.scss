@@ -5,9 +5,28 @@
   padding: 20px 20px;
   background-color: $c-grayer;
   border-radius: 20px;
+
+  @media (max-width: $screen-tn) {
+    margin: 15px 5px;
+  }
+}
+
+.card__content {
+  margin: 15px;
 }
 
 .card__title {
   margin-bottom: 20px;
   @include font-section-title();
+}
+
+.card__items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__item {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
 }

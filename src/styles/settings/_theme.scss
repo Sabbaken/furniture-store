@@ -15,12 +15,15 @@ $c-link-hover: $c-white;
 $c-button-primary: $c-grayer;
 $c-button-primary-background: $c-gray-lighter;
 $c-button-secondary: $c-gray-blue;
-$c-button-secondary-background: none;
+$c-button-secondary-background: $c-transparent;
 $c-button-controls-background: $c-gray-lightest;
 
+$c-button-action: $c-grayer;
+$c-button-action-background: $c-blue;
+
 // Inputs
-$c-text-input: $c-gray-lighter;
-$c-text-input-border: $c-pink;
+$c-text-input: $c-gray-lightest;
+$c-text-input-border: $c-blue;
 
 // Lines
 $c-separating-line: $c-gray-lighter;
