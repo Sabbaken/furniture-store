@@ -19,28 +19,35 @@ export default (state = initialState, action) => {
     case 'REMOVE_ITEM':
       filtered = state.cartContent.filter((itemFromCart) => {
         if (itemFromCart.id !== action.payload.item.id)
-        return itemFromCart;
+          return itemFromCart;
       })
 
       return Object.assign({}, state, filtered);
 
     case 'INCREASE_ITEM':
       filtered = state.cartContent.filter((itemFromCart) => {
-        if(itemFromCart.id !== action.payload.item.id) {
-          return itemFromCart.count = itemFromCart.count + 1;
+        if ((itemFromCart.id === action.payload.item.id) && (itemFromCart.count < 99)) {
+          itemFromCart.count = itemFromCart.count + 1;
+          return itemFromCart;
         }
+
+        return itemFromCart;
       })
 
-      return Object.assign({}, state, filtered);
+      return Object.assign({}, state, {cartContent: filtered});
 
     case 'DECREASE_ITEM':
       filtered = state.cartContent.filter((itemFromCart) => {
-        if(itemFromCart.id !== action.payload.item.id) {
-          return itemFromCart.count = itemFromCart.count - 1;
+        if ((itemFromCart.id === action.payload.item.id) && (itemFromCart.count > 0)) {
+
+          itemFromCart.count = itemFromCart.count - 1;
+          return itemFromCart;
         }
+
+        return itemFromCart;
       })
 
-      return Object.assign({}, state, filtered);
+      return Object.assign({}, state, {cartContent: filtered});
 
     default:
       return state;

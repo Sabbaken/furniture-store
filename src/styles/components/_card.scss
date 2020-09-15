@@ -1,12 +1,13 @@
 @import "../settings/all";
 
-.section {
+.card {
   margin: 15px;
-  padding: 20px 15px;
+  padding: 20px 20px;
+  background-color: $c-grayer;
+  border-radius: 20px;
 }
 
-.section__title {
+.card__title {
   margin-bottom: 20px;
-
   @include font-section-title();
 }

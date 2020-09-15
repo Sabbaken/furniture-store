@@ -1,0 +1,27 @@
+@import "../settings/all";
+
+.cart-content__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-content__controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-content__price {
+  width: 24px;
+  text-align: center;
+  @include font-small-card-price();
+}
+
+.cart-content__footer {
+  margin: 16px 0 0;
+  padding: 16px 8px 0;
+  border-top: 1.6px solid $c-separating-line;
+  text-align: right;
+  @include font-small-card-price();
+}
