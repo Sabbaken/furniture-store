@@ -6,16 +6,18 @@
   justify-content: space-between;
 }
 
-.cart-content__controls{
+.cart-content__controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: $c-button-controls-background;
+  border-radius: 10px;
 }
 
 .cart-content__price {
   width: 24px;
   text-align: center;
-  @include font-small-card-price();
+  @include font-text();
 }
 
 .cart-content__footer {
